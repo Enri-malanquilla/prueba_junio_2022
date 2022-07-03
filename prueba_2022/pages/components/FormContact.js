@@ -11,6 +11,7 @@ const FormContact = ({ setAddContact, setContact, contact }) => {
       name,
       address,
       phone,
+      group: 'contacts',
     };
     setContact([...contact, data]);
     setAddContact(false);
