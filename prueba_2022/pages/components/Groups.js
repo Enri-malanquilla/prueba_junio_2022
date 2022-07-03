@@ -1,6 +1,15 @@
 import { Contact } from './Contact';
 
-const Group = ({ data, contact, setDragData, dragData, setContact }) => {
+const Group = ({
+  data,
+  contact,
+  setDragData,
+  dragData,
+  setContact,
+  setGroup,
+  group,
+  index,
+}) => {
   const handleDragOver = (e) => {
     e.preventDefault();
   };
@@ -16,9 +25,15 @@ const Group = ({ data, contact, setDragData, dragData, setContact }) => {
     changeCategory(selected, group);
   };
 
+  const handleDeleteGroup = (e) => {
+    e.preventDefault();
+    group.splice(index + 1, 1);
+    setGroup([...group]);
+  };
+
   return (
     <li
-      style={{ border: 'solid 2px green' }}
+      className='contact_group'
       onDragOver={handleDragOver}
       onDrop={(e) => handleDrop(e, data)}
     >
@@ -36,11 +51,16 @@ const Group = ({ data, contact, setDragData, dragData, setContact }) => {
                     data={item}
                     id={index}
                     setDragData={setDragData}
+                    contact={contact}
+                    setContact={setContact}
                   />
                 );
               })}
         </ul>
       </div>
+      <button className='deleteGroup' onClick={handleDeleteGroup}>
+        X
+      </button>
     </li>
   );
 };

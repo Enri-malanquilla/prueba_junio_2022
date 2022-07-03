@@ -14,7 +14,6 @@ const FormGroup = ({ group, setGroup, setAddGroup }) => {
     <form onSubmit={handlerDataGroup}>
       <legend>Crear Grupo</legend>
       <div>
-        <label>Nombre del grupo</label>
         <input
           placeholder='Nombre Grupo'
           value={nameGroup}

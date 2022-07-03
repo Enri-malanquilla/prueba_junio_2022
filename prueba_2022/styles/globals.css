@@ -2,15 +2,118 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+  font-family: "Work Sans", sans-serif;
+    background: #181620;
+    color: #FFFFFF;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+
+  }
+
 
 * {
   box-sizing: border-box;
+}
+
+ .groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+ }
+
+ #contacts {
+  grid-column: 2;
+  /* me ha costado dejar contactos solo a la izda esto es un atajo */
+grid-row: 1 / 20;  
+display: flex; 
+flex-direction: column;
+align-items: center;
+
+ }
+
+
+
+ .btns {
+  display: grid;
+  grid-template-columns: auto;
+ }
+
+ li {
+  list-style: none;
+ }
+
+ button {
+	display: block;
+	position: relative;
+	margin: 0.5em 0;
+	padding: .8em 2.2em;
+	cursor: pointer;
+
+	background: #FFFFFF;
+	border: none;
+	border-radius: .4em;
+
+	text-transform: uppercase;
+	font-size: 1.4em;
+	font-family: "Work Sans", sans-serif;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+
+	perspective: 500px;
+
+ }
+
+
+ button:hover {
+  background-color: #FFF65B;
+  transition: background .3s 0.1s;
+}
+
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 50px;
+  display: flex;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+input {
+  font: inherit;
+  padding: 0.2em 0.5em;
+  max-width: 20em;
+}
+
+.contact_group {
+  border: solid 2px yellowgreen;
+  min-height: 10rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 5em;
+  align-items: center;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+form > button {
+  max-width: 20rem;
+}
+
+.deleteGroup {
+  width: 5px;
+  font-size: 0.5em;
+
 }

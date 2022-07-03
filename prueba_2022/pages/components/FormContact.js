@@ -19,7 +19,6 @@ const FormContact = ({ setAddContact, setContact, contact }) => {
 
   return (
     <form onSubmit={handlerDataContact}>
-      <legend>Crear contacto</legend>
       <div>
         <label>Nombre</label>
         <input
